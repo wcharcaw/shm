@@ -24,7 +24,7 @@ from scipy               import signal
 from scipy.optimize      import curve_fit
 from matplotlib.gridspec import GridSpec
 
-plt.rcParams["font.family"] = "Times New Roman"
+plt.rcParams["font.family"] = "serif"
 mpl.rcParams['mathtext.fontset'] = 'cm'
 
 #=============================================================================
@@ -695,10 +695,10 @@ def stabilization_diagram(FN, ZT, VV, title,
 
     if plot:
         
-        a_for = {'fontname':'Times New Roman','size':16}
-        l_for = {'fontname':'Times New Roman','size':14}
-        t_for = {'fontname':'Times New Roman','size':12}
-        g_for = {'family'  :'Times New Roman','size':12}
+        a_for = {'fontname':'serif','size':16}
+        l_for = {'fontname':'serif','size':14}
+        t_for = {'fontname':'serif','size':12}
+        g_for = {'family'  :'serif','size':12}
         
         plt.figure(figsize=(10,5))     
                     
@@ -900,7 +900,7 @@ def SDM(self, nperseg=None, plot=False, window='hann', nfft=None,
                          
     if plot:
 
-        l_for = {'fontname':'Times New Roman','size':13}        
+        l_for = {'fontname':'serif','size':13}        
         
         axis_f = [0, f[-1]]
         #axis_G = [10**7*np.min(np.abs(G[:,:,1:])),1.2*np.max(np.abs(G))]
@@ -1148,9 +1148,9 @@ def coherence(self, PSD=None, nperseg=None, plot=False):
             
     if plot:
         
-        a_for = {'fontname':'Times New Roman','size':14} 
-        l_for = {'fontname':'Times New Roman','size':12}        
-        t_for = {'family':'Times New Roman','size':10}
+        a_for = {'fontname':'serif','size':14} 
+        l_for = {'fontname':'serif','size':12}        
+        t_for = {'family':'serif','size':10}
         
         NX = self.NX
         
@@ -1829,9 +1829,9 @@ def plot_1dshapes(fn, zt, vv, title, X, ref=False, fix=False):
         Adds zero value to the mode shape at informed positions. For example,
         if fix=[0,L], adds zero at position X = 0 and X = L. Default is false.
     """        
-    a_for = {'fontname':'Times New Roman','size':14}
-    l_for = {'fontname':'Times New Roman','size':12}
-    t_for = {'fontname':'Times New Roman','size':10}
+    a_for = {'fontname':'serif','size':14}
+    l_for = {'fontname':'serif','size':12}
+    t_for = {'fontname':'serif','size':10}
     
     if ref is not False:  
         X  = np.hstack((X[ref,],np.delete(X,ref)))      
@@ -1885,10 +1885,10 @@ def plot_3das1d(fn, zt, q, X, title, ref=False):
         List of reference sensors.  
     """ 
 
-    a_for = {'fontname':'Times New Roman','size':14} 
-    g_for = {'family'  :'Times New Roman','size':12}
-    l_for = {'fontname':'Times New Roman','size':12}        
-    t_for = {'fontname':'Times New Roman','size':10}
+    a_for = {'fontname':'serif','size':14} 
+    g_for = {'family'  :'serif','size':12}
+    l_for = {'fontname':'serif','size':12}        
+    t_for = {'fontname':'serif','size':10}
 
     if ref is not False: 
         X  = np.hstack((X[ref],np.delete(X,ref)))
